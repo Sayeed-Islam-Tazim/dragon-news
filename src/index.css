@@ -8,4 +8,6 @@
 
 .active {
   background-color: gray;
+  padding: 5px;
+  border-radius: 50px;
 }

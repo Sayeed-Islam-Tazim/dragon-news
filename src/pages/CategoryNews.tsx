@@ -1,6 +1,6 @@
 import moment from "moment";
 import { useEffect, useState } from "react";
-import { FaEye, FaShare, FaStar } from "react-icons/fa";
+import { FaEye, FaShare } from "react-icons/fa";
 import { FaBookBookmark } from "react-icons/fa6";
 import { useLoaderData, useParams } from "react-router-dom";
 

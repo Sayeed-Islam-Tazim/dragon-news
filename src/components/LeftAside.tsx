@@ -9,7 +9,7 @@ const categoriesPromise = fetch("/demo-data/categories.json").then((res) =>
 const LeftAside = () => {
   const categories = use(categoriesPromise);
   return (
-    <div>
+    <div className="sticky top-0 h-fit">
       <Suspense
         fallback={<span className="loading loading-ring loading-xl"></span>}
       >

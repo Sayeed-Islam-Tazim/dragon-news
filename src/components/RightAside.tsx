@@ -8,7 +8,7 @@ import {
 
 const RightAside = () => {
   return (
-    <div>
+    <div className="sticky top-0 h-fit">
       <h3 className="text-lg font-semibold mb-2">Login With</h3>
       <button className="w-full mb-2 flex justify-center items-center text-blue-300 border-1 border-solid p-2 rounded">
         <FaGoogle className="me-2" /> Login with Google
@@ -18,7 +18,20 @@ const RightAside = () => {
       </button>
 
       <h3 className="text-lg font-semibold mb-2">Find Us On</h3>
-      <div className="flex flex-col ">
+      <div className="join join-vertical w-full">
+        <button className="btn join-item rounded-tl-md rounded-r-none border-white">
+          <FaFacebook /> Facebook
+        </button>
+        <button className="btn join-item border-white">
+          <FaTwitter />
+          Twitter
+        </button>
+        <button className="btn join-item rounded-br-md rounded-l-none border-white">
+          <FaInstagram />
+          Instagram
+        </button>
+      </div>
+      {/* <div className="mt-2 flex flex-col">
         <button
           className="rounded-tl-md border-1 border-white flex justify-center items-center gap-2 rounded-r-none bg-slate-800 py-2 px-4  text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
           type="button"
@@ -40,7 +53,7 @@ const RightAside = () => {
           <FaInstagram />
           Instagram
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -1,20 +1,27 @@
+import { NavLink } from "react-router-dom";
+
 const Register = () => {
   return (
-    <div className="hero bg-base-200 min-h-screen">
-      <div className="hero-content flex-col lg:flex-row">
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-          className="max-w-sm rounded-lg shadow-2xl"
-        />
-        <div>
-          <h1 className="text-5xl font-bold">Box Office News!</h1>
-          <p className="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p>
-          <button className="btn btn-primary">Get Started</button>
-        </div>
+    <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+      <div className="card-body">
+        <fieldset className="fieldset">
+          <label className="label">Name</label>
+          <input type="text" className="input" placeholder="Name" />
+          <label className="label">Photo Url</label>
+          <input type="text" className="input" placeholder="Photo Url" />
+          <label className="label">Email</label>
+          <input type="email" className="input" placeholder="Email" />
+          <label className="label">Password</label>
+          <input type="password" className="input" placeholder="Password" />
+
+          <button className="btn mt-4">Register</button>
+        </fieldset>
+        <p>
+          Already have an account?{" "}
+          <NavLink className="text-blue-300" to={"/auth/login"}>
+            Login
+          </NavLink>
+        </p>
       </div>
     </div>
   );

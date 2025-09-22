@@ -4,6 +4,9 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import HomePage from "../pages/HomePage";
 import CategoryNews from "../pages/CategoryNews";
+import AuthLayout from "../layouts/AuthLayout";
+import About from "../pages/About";
+import Career from "../pages/Career";
 
 const routes = createBrowserRouter([
   {
@@ -22,12 +25,26 @@ const routes = createBrowserRouter([
     ],
   },
   {
-    path: "login",
-    element: <Login />,
+    path: "auth",
+    element: <AuthLayout />,
+    children: [
+      {
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "register",
+        element: <Register />,
+      },
+    ],
   },
   {
-    path: "register",
-    element: <Register />,
+    path: "about",
+    element: <About />,
+  },
+  {
+    path: "career",
+    element: <Career />,
   },
   {
     path: "*",
