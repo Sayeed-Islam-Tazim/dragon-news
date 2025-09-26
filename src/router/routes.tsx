@@ -7,6 +7,7 @@ import CategoryNews from "../pages/CategoryNews";
 import AuthLayout from "../layouts/AuthLayout";
 import About from "../pages/About";
 import Career from "../pages/Career";
+import PrivateRoute from "./privateRoute";
 
 const routes = createBrowserRouter([
   {
@@ -40,7 +41,11 @@ const routes = createBrowserRouter([
   },
   {
     path: "about",
-    element: <About />,
+    element: (
+      <PrivateRoute>
+        <About />
+      </PrivateRoute>
+    ),
   },
   {
     path: "career",
